@@ -19,11 +19,13 @@ mixer.music.play()
 
 # main
 pygame_icon = pygame.image.load('/home/kirill/vscode/python/Conquer/GameFiles/icon.png')
-scr = pygame.display.set_mode((1200, 800), pygame.RESIZABLE)
+scr = pygame.display.set_mode((900, 900 ), pygame.RESIZABLE)
 pygame.display.set_caption('Conquer TEST 0.1')
 clock = pygame.time.Clock()
 sprite01 = pygame.image.load('/home/kirill/vscode/python/Conquer/GameFiles/Sprite.png')
 pygame.display.set_icon(pygame_icon)
+
+bg = pygame.image.load('/home/kirill/vscode/python/Conquer/GameFiles/t.png')
 
 # sprites
 def sprite(x,y):
@@ -44,7 +46,7 @@ while running:
         if event.type == pygame.QUIT:
             running = False
 
-    scr.fill(WHITE)
+    scr.blit(bg, (0,0))
     sprite(x,y)
 
     pygame.display.update()
